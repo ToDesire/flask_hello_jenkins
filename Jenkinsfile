@@ -48,8 +48,8 @@ spec:
         stage('Build image') {
             steps{
                 container('docker') {
-                    sh "docker build -t registry.kube-system.svc.cluster.local:80/pythontest:latest ."
-                    sh "docker push registry.kube-system.svc.cluster.local:80/pythontest:latest"
+                    sh "docker build -t 192.168.49.1:4000/pythontest:latest ."
+                    sh "docker push 192.168.49.1:4000/pythontest:latest"
                 }
             }
         }
