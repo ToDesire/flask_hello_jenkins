@@ -6,7 +6,7 @@ metadata:
     app: pythontest
 spec:
   selector:
-    matchlabels:
+    matchLabels:
       app: pythontest
   strategy:
     type: Recreate
@@ -17,8 +17,8 @@ spec:
         app: pythontest
     spec:
       containers:
-        - images: 192.168.49.1:4000/pythontest:latest
-          name: pythontest
+        - name: pythontest
+          image: 192.168.49.1:4000/pythontest:latest
           ports:
-           - containerPort: 5000
-             name: microport
+            - containerPort: 5000
+              name: microport
