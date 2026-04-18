@@ -44,6 +44,12 @@ spec:
                 }
             }
         }
+
+        stage('Build image') {
+            steps{
+                sh "docker info"
+            }
+        }
         
     }
 }
