@@ -5,9 +5,9 @@ metadata:
   labels:
     app: pythontest
 spec:
+  type: NodePort
   ports:
     - port: 5000
       nodePort: 31000
   selector:
     app: pythontest
-  type: NodePort
