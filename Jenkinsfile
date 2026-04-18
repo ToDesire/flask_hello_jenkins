@@ -6,14 +6,14 @@ pipeline {
 apiVersion: v1
 kind: Pod
 metadata:
-    labels:
-        component: ci
+  labels:
+    component: ci
 spec:
-    containers:
-        - name: python
-        image: python:3.12-slim
-        command:
-            - cat
+  containers:
+  - name: python
+    image: python:3.12-slim
+    command:
+    - cat
     tty: true
 """
         }
