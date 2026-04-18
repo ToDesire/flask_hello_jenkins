@@ -48,7 +48,7 @@ spec:
             steps {
                 container('docker') {
                     script{
-                        def REGISTRY = "192.168.49.2:4000"
+                        def REGISTRY = "192.168.49.1:4000"
                         sh "docker build -t ${REGISTRY}/pythontest:latest ."
                         sh "docker push ${REGISTRY}/pythontest:latest"
                     }
