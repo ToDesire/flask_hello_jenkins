@@ -1,7 +1,6 @@
 pipeline {
     agent {
         kubernetes {
-            {
                 label 'flask-app-agent'
                 yaml """
 apiVersion: v1
@@ -17,8 +16,8 @@ spec:
             - cat
     tty: true
 """
-            }
-        }}
+        }
+    }
     stages {
         stage('Test python') {
             steps {
