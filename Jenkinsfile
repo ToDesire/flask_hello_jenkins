@@ -47,6 +47,7 @@ spec:
         stage('Build image') {
             steps {
                 container('docker') {
+                    def REGISTRY = "192.168.49.2:4000"
                     sh "docker build -t localhost:4000/pythontest:latest ."
                     sh "docker push localhost:4000/pythontest:latest"
                 }
