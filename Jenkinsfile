@@ -46,8 +46,10 @@ spec:
         }
 
         stage('Build image') {
-            steps{
-                sh "docker info"
+            container('docker'){
+                steps{
+                    sh "docker info"
+                }
             }
         }
         
